@@ -7,7 +7,7 @@ import RootProviders from "@/components/providers/RootProviders";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Momey Manager",
+  title: "Money Manager",
   description: "A simple money manager",
 };
 

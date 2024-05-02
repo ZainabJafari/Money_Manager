@@ -2,12 +2,13 @@
 import React, { useState } from 'react'
 import Logo from './Logo'
 import { usePathname } from 'next/navigation'
-import { Link, Menu } from 'lucide-react'
+import {  Menu } from 'lucide-react'
 import { cn } from '@/lib/utils';
 import { Button, buttonVariants } from './ui/button';
 import { UserButton } from '@clerk/nextjs';
 import { ThemeSwitcherBtn } from './ThemeSwitcherBtn';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (

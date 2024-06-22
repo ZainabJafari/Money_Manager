@@ -37,6 +37,8 @@ export function CurrencyComboBox() {
     queryFn: () => fetch("/api/user-settings").then((res) => res.json()),
   });
 
+  console.log(userSettings.data);
+
   React.useEffect(() => {
     if (!userSettings.data) return;
     const useCurrency = Currencies.find(
@@ -46,6 +48,8 @@ export function CurrencyComboBox() {
       setSelectedOption(useCurrency);
     }
   }, [userSettings.data]);
+
+  console.log(userSettings.data);
 
   const mutation = useMutation({
     mutationFn: UpdateUserCurrency,
@@ -57,7 +61,7 @@ export function CurrencyComboBox() {
       );
     },
   });
-
+  console.log(selectedOption);
   const selectOption = React.useCallback(
     (Currency: Currency | null) => {
       if (!Currency) {

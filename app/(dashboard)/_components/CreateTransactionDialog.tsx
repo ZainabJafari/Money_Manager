@@ -104,6 +104,24 @@ function CreateTransactionDialog({trigger, type}: Props){
                                 </FormLabel>
                             </FormItem>
                         )}/>
+
+                        <div className="flex items-center justify-between gap-2">
+                        <FormField 
+                        control={form.control}
+                        name="amount"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel>Category</FormLabel>
+                                    <FormControl>
+                                        <Input defaultValue={0} type="number" {...field}/>
+                                    </FormControl>
+                                    <FormDescription>
+                                        Transaction amount (required)
+                                    </FormDescription>
+                            </FormItem>
+                        )}/>
+
+                        </div>
                     </form>
                 </Form>
             </DialogContent>
